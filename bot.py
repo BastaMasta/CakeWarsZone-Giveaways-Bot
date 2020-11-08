@@ -47,7 +47,7 @@ async def giveaway_start(ctx, rewards=1, duration=1):
         dataobtained = True
     except ValueError:
         ctx.send("You have entered an invalid value.")
-    sleep_time = int(duration) * 60 * 60 * 24
+    sleep_time = int(duration * 60 * 60 * 24)
     if dataobtained:
         if rewards == 1:
             await author1.send("Please enter the reward for the giveaway:")
