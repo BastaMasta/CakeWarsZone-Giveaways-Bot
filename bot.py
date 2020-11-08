@@ -12,7 +12,7 @@ from set_rewards import *
 with open("TOKEN") as tk:
     kfor line in te:
         TOKEN = line
-BOT_PREFIX = "!>>"
+BOT_PREFIX = "!>"
 
 emoji_ = '🎉'
 
@@ -31,7 +31,7 @@ async def on_ready():
 async def help(ctx):
     author_ = ctx.message.author
     help_embed = discord.Embed(title="Whomst has summoned the ancient one?", description="Whatever. Here is how you are supposed to use my command(s):")
-    help_embed.add_field(name="giveaway_start [number of prizes] [duration (in days)]", value="use this command to create a new giveaway.\n Note: you can use decimal values for the duration of the giveaway")
+    help_embed.add_field(name="giveaway_start [number of prizes] in [duration (month/day/year or hh:mm:ss)]", value="use this command to create a new giveaway.")
     help_embed.set_footer(text="I was summoned by {0}".format(author_.display_name))
     await ctx.send(embed=help_embed)
 
